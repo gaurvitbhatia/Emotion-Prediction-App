@@ -1,0 +1,47 @@
+<h1 style="color: black; text-align:center; padding: 21px; background-color:orange;">EMOTION PREDICTION APP</h1>
+<h2 style="text-align:center; color: DarkCyan; padding: 11px;">Please enter some text message below for the prediction :</h2>
+<head>  
+    <style> 
+        .tab2 {  
+            display: inline-block; 
+            margin-left: 450px;
+        }
+        .tab3 { 
+            display: inline-block; 
+            margin-left: 640px; 
+        } 
+        label{
+            width: 180px;
+            display: inline-block;
+            text-align:center;
+            margin-left: 400px;
+            }
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: BlanchedAlmond;
+            color: white;
+            text-align: center;
+            }
+    </style> 
+</head> 
+
+<body>
+    <form  method="POST">
+        {# This hidden_tag is a CSRF security feature. #}
+        {{ form.hidden_tag() }}
+        <span class="tab2" style="text-align:center; color:blue; padding:11px; width:400px;">{{form.Text(rows='15',cols='60')}}</span>
+        <br>
+        <br>
+        <br>
+        <span class="tab3"> {{ form.submit() }}</span>
+    </form>
+    <div class="footer">
+      <a href="https://github.com/gaurvitbhatia" style="text-align:center; color: DarkRed; padding: 11px;"><b>GitHub</b></a>
+      <br>
+      <br>
+      <a href="https://www.linkedin.com/in/gaurvit-bhatia-84119468/" style="text-align:center; color: DarkRed; padding: 11px;"><b>LinkedIn</b></a>
+    </div>
+</body> 
